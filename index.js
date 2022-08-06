@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const infos = require('./routes/info');
 require('dotenv').config();
 
-const PORT = process.env.PORT || 4000;
+var PORT = process.env.PORT || 4000;
 
 
 //Middleware
