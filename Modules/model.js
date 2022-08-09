@@ -55,4 +55,6 @@ const dataschema = new mongoose.Schema({
         { type: Number },
 })
 
-module.exports = mongoose.model('infos', dataschema);
+//module.exports = mongoose.model('infos', dataschema);
+const Data = mongoose.model("infos", dataschema);
+module.exports.Data = Data;
