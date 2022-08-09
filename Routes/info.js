@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Data = require('../Modules/model');
+const {Data} = require('../Modules/model');
 
 //get api
 router.get('/', async (req, res) => {
