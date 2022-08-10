@@ -15,7 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 app.use('/api', infos);
 
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 //Connect to MongoDB atlas
 mongoose.connect(process.env.MONGO_URL,{
