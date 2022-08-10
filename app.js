@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const infos = require('./Routes/info');
+const cors = require('cors');
 require('dotenv').config();
 
 var PORT = process.env.PORT || 4000;
@@ -13,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 
 //routes
 app.use('/api', infos);
+
+app.use(cors());
 
 //Connect to MongoDB atlas
 mongoose.connect(process.env.MONGO_URL,{
