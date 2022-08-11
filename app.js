@@ -9,16 +9,12 @@ var PORT = process.env.PORT || 4000;
 
 
 //Middleware
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors({origin: '*'}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //routes
 app.use('/api', infos);
-
-
 
 
 //Connect to MongoDB atlas
